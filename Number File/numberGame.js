@@ -1,31 +1,42 @@
 let guessNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20, highScore = 0;
+let gameMessage = document.querySelector("#message");
+let gameScore = document.querySelector("#score");
+let guessButton = document.getElementById("check");
+let guess = document.getElementById("guess");
 
-function myGuess() {
-    let guess = document.querySelector("#guess").value;
-    console.log('check',document.querySelector("#guess").value);
-    // alert(guess)
-    if (guess > guessNumber) {
-        document.querySelector("#message").innerHTML = 'too high';
-        score--;
-        document.getElementById("score").innerHTML = score;
-    } else if (guess < guessNumber) {
-        document.getElementById("message").innerHTML = 'too low';
-        score--;
-        document.getElementById("score").innerHTML = score;
-    } else if (guessNumber == guess) {
-        // debugger
-        document.getElementById("message").innerHTML = 'Bingo! you got the number';
-        highScore = score > highScore ? score : highScore;
-        console.log('highscore',highScore)
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("highscore").innerHTML = highScore;
-    }
-
+const handleInputChange = () => {
+    guessButton.disabled = guess.value.length === 0;
 }
 
+const myGuess = () => {
+    if (guess.value >= 1 && guess.value <= 20) {
+        if (guessNumber == guess.value) {
+            gameMessage.innerHTML = 'Bingo! you got the number';
+            highScore = score > highScore ? score : highScore;
+            gameScore.innerHTML = score;
+            document.querySelector("#highscore").innerHTML = highScore;
+            guessButton.disabled=true;
+        } else {
+            if (score > 0) {
+                score--;
+                guess.value > guessNumber ? gameMessage.innerHTML = 'too high' : gameMessage.innerHTML = 'too low';
+                gameScore.innerHTML = score;
+            } else {
+                gameMessage.innerHTML = "oops! try again."
+                guessButton.disabled=true;
+            }
+        }
+    } else {
+        alert('enter number between 1-20')
+    }
+}
 
 const resetGame = () => {
-document.querySelector("#guess").value = ' ';
-document.getElementById("score").innerHTML = 20;
+    score = 20;
+    guessNumber = Math.floor(Math.random() * 20) + 1;
+    guessButton.disabled=false;
+    document.querySelector("#guess").value = ' ';
+    gameScore.innerHTML = score;
+    gameMessage.innerHTML = "Start guessing..."
 }
