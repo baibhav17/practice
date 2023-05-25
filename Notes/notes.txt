@@ -1,0 +1,149 @@
+1. There are total 5 falsy values=> 0, '', null, undefined, NaN
+
+2. typeOf NaN is Number, which means it is an invalid number.
+
+3. typeOf of null is Object(legacy error of JS).
+
+4. Type coercion for converting number into string works only with '+' operator.
+where as, with operators like '-,*,/' it converts the string into numbers, yes that is just oppostie of first case.
+
+        for example:- 
+
+        5 + '5' = 55
+        but,
+
+        5 - '1' = 4
+
+5. Hoisting:-
+
+Variables ==> variables are hoisted in JS, which means  you can refer to a variable declared later, without getting an exception.
+ In ECMA 2015(ES6) let and const were introduced, they throw referenece error if you try to access them before initilization.
+
+Functions ==> Fucntion declarations are hoisted, but function expressions are not.
+
+6. const variables are immutable, but only for primitive data types.
+
+7. array.includes(parameter) checks if data is present in the array or not just like indexOf(), but,
+ includes() reutrns boolean value also it do strict type checking.
+
+ 8. defer attribute in Script tag.
+
+
+ 9. for complexity N---> ALWAYS USE HASH MAP INSTEAD OF SORTING.
+
+
+ 10. Fetch, target vs currentTarget
+
+ New Topics
+
+ 11. webpack loaders and plugins and webpack Lifecycle and Jest Lifecycle.
+
+ 12. frequency of a number(O(n2) and )
+
+ 13. *Singleton, *factory, command and builder design pattern.
+
+ 14. fibbonacci using cache/memoziation.
+
+
+15. Explain the concept of event delegation in JavaScript and provide an example.
+
+16. Can you explain the difference between the map() and forEach() methods in JavaScript?
+
+17. How would you implement a binary search algorithm in JavaScript?
+
+18. Can you explain the difference between synchronous and asynchronous code in JavaScript and provide examples of when you would use each?
+
+19. What is a closure in JavaScript and how can it be used to improve performance?
+
+20. Explain the difference between undefined and null in JavaScript and when you would use each.
+
+21. What is the difference between a stack and a queue in JavaScript? Can you provide an example of when you would use each?
+
+22. Can you explain how the this keyword works in JavaScript?
+
+23. What is a higher-order function in JavaScript and provide an example of how you would use it.
+
+24.How would you implement a debounce function in JavaScript?
+
+25. What is a closure in JavaScript and how is it used?
+
+26. Explain the difference between synchronous and asynchronous code in JavaScript.
+
+27. How would you handle errors in your JavaScript code?
+
+28. Explain the differences between null and undefined in JavaScript.
+
+29. What is a Promise in JavaScript and how does it work?
+
+30. Can you explain the concept of hoisting in JavaScript?
+
+31. How would you go about testing your JavaScript code?
+
+32. Can you explain the difference between the == and === operators in JavaScript?
+
+33. What is the difference between var, let, and const in JavaScript?
+
+34. Explain the concept of prototypal inheritance in JavaScript.
+
+
+************************************* CODING QUESTIONS ********************
+
+
+1. Write a function that takes in a string and returns the number of vowels in the string.
+
+2. Implement a function that takes in an array of numbers and returns the second highest number in the array.
+
+3. Create a function that takes in a string and returns the string with all vowels removed.
+
+4. Write a function that takes in a string and returns the first non-repeating character in the string.
+
+5. Implement a function that takes in an array of integers and returns the sum of the two largest integers in the array.
+
+6. Create a function that takes in a string and returns the reverse of the string.
+
+7. Write a function that takes in an array of numbers and returns an array with all the numbers doubled.
+
+8. Implement a function that takes in a string and returns the number of words in the string.
+
+9. Create a function that takes in two strings and returns true if the first string is an anagram of the second string, false otherwise.
+
+10. Write a function that takes in an array of integers and returns a new array with all the even numbers removed.
+
+11. Write a function that takes in an array of objects and returns an array with only the objects that have a specific property and value.
+
+12. Implement a function that takes in a string and returns the number of unique characters in the string.
+
+13. Create a function that takes in an array of numbers and returns the median of the numbers.
+
+14. Write a function that takes in a string and returns true if the string is a palindrome, false otherwise.
+
+15. Implement a function that takes in two arrays and returns an array with only the elements that are common to both arrays.
+
+16. Create a function that takes in a number and returns true if the number is prime, false otherwise.
+
+17. Write a function that takes in an array of objects and returns an object with the number of times each property value appears in the array.
+
+18. Implement a function that takes in a string and returns the longest word in the string.
+
+19. Create a function that takes in an array of numbers and returns the number that appears most frequently in the array.
+
+20. Write a function that takes in two numbers and returns the greatest common divisor of the two numbers.
+
+
+************** REACT CODING QUESTIONS **********
+
+1. Write a component in React that renders a list of items passed to it as props.
+
+2. Implement a React component that allows a user to search a list of data, with the results being displayed in real-time.
+
+3. Write a React component that uses the useEffect hook to fetch data from an API when the component is mounted.
+
+4. Implement a React component that allows a user to drag and drop items from one list to another.
+
+5. Create a React component that fetches data from an API and displays it in a paginated table, with sorting and filtering capabilities.
+
+6. Write a React component that uses the useContext hook to share state between multiple components.
+
+7. Create a React component that displays a form with validation, submitting the data to an API endpoint when the form is submitted.
+
+8. Implement a React component that uses the useRef hook to add and remove items from a list without re-rendering the entire list.
